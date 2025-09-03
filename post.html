@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Banana Games</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the accordion arrows */
+        .faq-item[open] .arrow-down {
+            display: none;
+        }
+        .faq-item:not([open]) .arrow-up {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-8">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="https://placehold.co/32x32/transparent/transparent?text=AI" alt="AIPURE Logo" class="h-8">
+                    <span class="font-bold text-xl text-indigo-700">AIPURE</span>
+                </a>
+                <nav class="hidden md:flex space-x-6 text-gray-600 text-sm">
+                    <a href="#" class="hover:text-indigo-600">Home</a>
+                    <a href="#" class="hover:text-indigo-600 flex items-center">Category <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+                    <a href="#" class="hover:text-indigo-600 flex items-center">Ranking <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/24x24/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+                    <a href="#" class="hover:text-indigo-600">Articles</a>
+                    <a href="#" class="hover:text-indigo-600 flex items-center">Submit & Promote <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full ml-1">New</span> <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-indigo-600 hidden md:block">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </button>
+                <div class="relative hidden md:block">
+                    <select class="block appearance-none bg-transparent border-none text-gray-600 hover:text-indigo-600 py-2 pl-2 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline text-sm">
+                        <option>English</option>
+                        <option>Vietnamese</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 6.757 7.586 5.343 9z"/></svg>
+                    </div>
+                </div>
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-md text-sm font-medium transition duration-300">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 text-sm text-gray-500">
+        <a href="#" class="hover:text-indigo-600">Home</a> &gt; <a href="#" class="hover:text-indigo-600">Category</a> &gt; <span class="text-gray-700">Nano Banana Games</span>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-6 md:px-10 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column - Product Information -->
+            <div class="lg:col-span-2">
+                <!-- Product Header Section -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8 flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <div class="flex-shrink-0">
+                        <img src="https://placehold.co/64x64/ffcb05/transparent?text=%F0%9F%8D%8C" alt="Nano Banana Games Icon" class="w-16 h-16 rounded-full">
+                    </div>
+                    <div class="flex-grow">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-2">Nano Banana Games</h1>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Website</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Free</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Photo & Image Editor</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Nano Banana Games is a free AI image playground that allows users to create, edit,
+                            and transform images through natural language prompts without requiring sign-up,
+                            featuring powerful tools like pose generation, face swaps, and background changes.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
+                                Visit Website <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-7h4m0 0H14m0 0L8 16"></path></svg>
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition duration-300">
+                                <svg class="w-4 h-4 mr-2 text-indigo-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-4 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path></svg>
+                                Advertise This Tool
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs for Overview/Alternatives -->
+                <div class="flex border-b border-gray-200 mb-8">
+                    <button class="flex items-center px-6 py-3 text-indigo-600 border-b-2 border-indigo-600 font-medium -mb-px">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 5a1 1 0 011-1h1a1 1 0 010 2H5a1 1 0 01-1-1zm12 0a1 1 0 011 1h-1a1 1 0 110-2h1zm-5 5a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zM4 11a1 1 0 011-1h1a1 1 0 010 2H5a1 1 0 01-1-1zm12 0a1 1 0 011-1h-1a1 1 0 110-2h1zm-5 5a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        Overview
+                    </button>
+                    <button class="flex items-center px-6 py-3 text-gray-500 hover:text-gray-700 font-medium">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 5a1 1 0 011-1h1a1 1 0 010 2H5a1 1 0 01-1-1zm12 0a1 1 0 011 1h-1a1 1 0 110-2h1zm-5 5a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zM4 11a1 1 0 011-1h1a1 1 0 010 2H5a1 1 0 01-1-1zm12 0a1 1 0 011-1h-1a1 1 0 110-2h1zm-5 5a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        Alternatives
+                    </button>
+                </div>
+
+                <!-- Overview Content -->
+                <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Product Information</h2>
+
+                    <div class="mb-6">
+                        <p class="text-gray-600"><strong class="font-semibold">Updated:</strong> Sep 1, 2025</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">What is Nano Banana Games?</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Nano Banana Games is an innovative online platform that democratizes AI image editing through an intuitive playground interface. It represents a significant advancement in making sophisticated AI image manipulation accessible to everyone, powered by Google's Gemini 2.5 Flash Image technology (also known as Nano Banana). The platform offers a suite of creative tools to perform anything from simple edits to complex character generation, all through a user-friendly interface that requires no technical expertise or account creation.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Features of Nano Banana Games</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Nano Banana Games is a free AI image playground that allows users to edit and transform images using natural language prompts without requiring sign-up. The platform features advanced pose generation, face swapping, background replacement, and image enhancement capabilities, all powered by Google's Gemini 2.5 Flash Image AI technology. It excels at maintaining character consistency across edits while offering professional-quality results through a simple, intuitive interface.
+                        </p>
+                        <ul class="list-none space-y-3 pl-0 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-indigo-600 mr-2 mt-1">●</span>
+                                <div>
+                                    <strong class="font-medium">Natural Language Image Editing:</strong> Transform images by simply describing desired changes in plain text, eliminating the need for complex editing tools or technical expertise.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-600 mr-2 mt-1">●</span>
+                                <div>
+                                    <strong class="font-medium">Character Consistency:</strong> Maintains facial features and identity across multiple edits, making it ideal for creating consistent narratives or evolving character designs.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-600 mr-2 mt-1">●</span>
+                                <div>
+                                    <strong class="font-medium">Advanced Pose Generation:</strong> Users can specify new poses for subjects in their images using natural language, enabling dynamic storytelling and realistic adjustments without manual manipulation.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-600 mr-2 mt-1">●</span>
+                                <div>
+                                    <strong class="font-medium">Seamless Face Swapping:</strong> Effortlessly swap faces between images with high precision and natural blending, perfect for creative projects or humorous transformations.
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="mt-4 text-indigo-600 font-medium flex items-center hover:text-indigo-700">
+                            Show More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">How to Use Nano Banana Games</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700 pl-4">
+                            <li><strong class="font-medium">Visit the Website:</strong> Go to nanobanana.games - no sign up or login required to start using the free AI image playground</li>
+                            <li><strong class="font-medium">Upload Your Images:</strong> Upload one or multiple images by dragging and dropping them onto the canvas. Position and resize the images as needed for your AI transformation.</li>
+                            <li><strong class="font-medium">Select Areas to Modify (Optional):</strong> Use the available drawing tools (Brush, Eraser, Line, Circle, Rectangle) to mark specific areas you want to transform. You can leave areas unmarked to let AI process the entire image.</li>
+                            <li><strong class="font-medium">Enter Your Creative Prompt:</strong> Write detailed instructions in the prompt box describing what you want to achieve with your image, such as 'make person jump', 'add magical effects', or 'change to action pose'.</li>
+                            <li><strong class="font-medium">Choose Generation Type:</strong> Select between VIP Generation (best quality, requires credits), Free Generation (good quality, instant), or Free2 Generation (better quality, jump). These are your processing options.</li>
+                            <li><strong class="font-medium">Generate & Crop Result:</strong> Click the generate button to start the AI transformation. Select the output region you want to capture from the result.</li>
+                            <li><strong class="font-medium">Download Your Creation:</strong> Once satisfied with the result, download your transformed image to save it.</li>
+                            <li><strong class="font-medium">Experiment with Different Modes:</strong> Try various playground modes like Pose Generator, Face Swap Adventures, Image Enhancement Lab, and Background Magic Studio for different creative effects.</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Nano Banana Games FAQs</h3>
+                        <div class="space-y-4">
+                            <!-- FAQ Item 1 (Open by default) -->
+                            <details class="bg-gray-50 rounded-lg p-4 faq-item" open>
+                                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                                    1. What is Nano Banana Games?
+                                    <span class="text-indigo-600">
+                                        <svg class="w-5 h-5 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        <svg class="w-5 h-5 arrow-up" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                                    </span>
+                                </summary>
+                                <p class="mt-2 text-gray-600">
+                                    Nano Banana Games is a free AI image playground that requires no sign up, allowing users to edit and transform images using natural language prompts. It features tools like pose generation, face swaps, image enhancement, and background changes.
+                                </p>
+                            </details>
+
+                            <!-- FAQ Item 2 -->
+                            <details class="bg-gray-50 rounded-lg p-4 faq-item">
+                                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                                    2. How do I get started with Nano Banana Games?
+                                    <span class="text-indigo-600">
+                                        <svg class="w-5 h-5 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        <svg class="w-5 h-5 arrow-up" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                                    </span>
+                                </summary>
+                                <p class="mt-2 text-gray-600">
+                                    Simply visit the Nano Banana Games website (nanobanana.games), upload your image, and start editing with text prompts. No account or sign-up is required.
+                                </p>
+                            </details>
+
+                            <!-- FAQ Item 3 -->
+                            <details class="bg-gray-50 rounded-lg p-4 faq-item">
+                                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                                    3. What features does Nano Banana Games offer?
+                                    <span class="text-indigo-600">
+                                        <svg class="w-5 h-5 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        <svg class="w-5 h-5 arrow-up" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                                    </span>
+                                </summary>
+                                <p class="mt-2 text-gray-600">
+                                    It offers natural language image editing, character consistency, advanced pose generation, seamless face swapping, image enhancement, and background replacement.
+                                </p>
+                            </details>
+
+                            <!-- FAQ Item 4 -->
+                            <details class="bg-gray-50 rounded-lg p-4 faq-item">
+                                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                                    4. Do I need to create an account to use Nano Banana Games?
+                                    <span class="text-indigo-600">
+                                        <svg class="w-5 h-5 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        <svg class="w-5 h-5 arrow-up" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                                    </span>
+                                </summary>
+                                <p class="mt-2 text-gray-600">
+                                    No, Nano Banana Games is designed for instant use without any login or sign-up requirements.
+                                </p>
+                            </details>
+
+                            <!-- FAQ Item 5 -->
+                            <details class="bg-gray-50 rounded-lg p-4 faq-item">
+                                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                                    5. What types of editing tools are available?
+                                    <span class="text-indigo-600">
+                                        <svg class="w-5 h-5 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        <svg class="w-5 h-5 arrow-up" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                                    </span>
+                                </summary>
+                                <p class="mt-2 text-gray-600">
+                                    It includes drawing tools like Brush, Eraser, Line, Circle, and Rectangle to mark specific areas for modification.
+                                </p>
+                            </details>
+
+                            <!-- FAQ Item 6 -->
+                            <details class="bg-gray-50 rounded-lg p-4 faq-item">
+                                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                                    6. Can I use Nano Banana Games for commercial purposes?
+                                    <span class="text-indigo-600">
+                                        <svg class="w-5 h-5 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        <svg class="w-5 h-5 arrow-up" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                                    </span>
+                                </summary>
+                                <p class="mt-2 text-gray-600">
+                                    The terms of use regarding commercial purposes would typically be found on the platform's official website. Please refer to nanobanana.games for specific licensing details.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latest AI Tools Similar to Nano Banana Games -->
+                <section class="mb-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-900">Latest AI Tools Similar to Nano Banana Games</h2>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center hover:text-indigo-700">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Tool Card 1 -->
+                        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-start">
+                            <img src="https://placehold.co/280x160/cccccc/333333?text=IMG+Processing" alt="IMG Processing" class="w-full h-auto rounded-md mb-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">IMG Processing</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Free Trial</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Photo & Image Editor</span>
+                            </div>
+                            <p class="text-gray-600 text-sm flex-grow">
+                                IMG Processing is a powerful API service that enables fast and reliable image...
+                            </p>
+                            <a href="#" class="mt-4 text-indigo-600 text-sm flex items-center hover:text-indigo-700">
+                                Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                        <!-- Tool Card 2 -->
+                        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-start">
+                            <img src="https://placehold.co/280x160/cccccc/333333?text=Wink+Mody" alt="Wink Mody" class="w-full h-auto rounded-md mb-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Wink Mody</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Free</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AI Video Editing</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Photo & Image Editor</span>
+                            </div>
+                            <p class="text-gray-600 text-sm flex-grow">
+                                Wink Mody is a modified version of the Wink video editing app that offers premiu...
+                            </p>
+                            <a href="#" class="mt-4 text-indigo-600 text-sm flex items-center hover:text-indigo-700">
+                                Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                        <!-- Tool Card 3 -->
+                        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-start">
+                            <img src="https://placehold.co/280x160/cccccc/333333?text=Erase+BG" alt="Erase BG" class="w-full h-auto rounded-md mb-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Erase BG</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Free</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AI Background Remover</span>
+                            </div>
+                            <p class="text-gray-600 text-sm flex-grow">
+                                Erase BG is a free, AI-powered online tool that automatically removes backgrounds...
+                            </p>
+                            <a href="#" class="mt-4 text-indigo-600 text-sm flex items-center hover:text-indigo-700">
+                                Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                        <!-- Tool Card 4 -->
+                        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-start">
+                            <img src="https://placehold.co/280x160/cccccc/333333?text=PicTrix+AI" alt="PicTrix AI" class="w-full h-auto rounded-md mb-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">PicTrix AI</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Free Trial</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AI Photo & Image Generator</span>
+                            </div>
+                            <p class="text-gray-600 text-sm flex-grow">
+                                PicTrix AI is an advanced AI-powered platform that transforms text prompts and...
+                            </p>
+                            <a href="#" class="mt-4 text-indigo-600 text-sm flex items-center hover:text-indigo-700">
+                                Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Popular AI Tools Like Nano Banana Games -->
+                <section class="mb-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-900">Popular AI Tools Like Nano Banana Games</h2>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center hover:text-indigo-700">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Tool Card 1 -->
+                        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-start">
+                            <img src="https://placehold.co/280x160/cccccc/333333?text=Krita" alt="Krita" class="w-full h-auto rounded-md mb-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Krita</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Free</span>
+                                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AI Art & Design Creator</span>
+                            </div>
+                            <p class="text-gray-600 text-sm flex-grow">
+                                Krita is a free and open-source digital painting and illustration software that offe...
+                            </p>
+                            <a href="#" class="mt-4 text-indigo-600 text-sm flex items-center hover:text-indigo-700">
+                                Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                        <!-- Tool Card 2 -->
+                        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-start">
+                            <img src="https://placehold.co/280x160/cccccc/333333?text=Adobe+Photoshop" alt="Adobe Photoshop App" class="w-full h-auto rounded-md mb-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Adobe Photoshop App</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Free</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Photo & Image Editor</span>
+                            </div>
+                            <p class="text-gray-600 text-sm flex-grow">
+                                Adobe Photoshop App is a free, powerful mobile photo editor that allows users to...
+                            </p>
+                            <a href="#" class="mt-4 text-indigo-600 text-sm flex items-center hover:text-indigo-700">
+                                Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                        <!-- Tool Card 3 -->
+                        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-start">
+                            <img src="https://placehold.co/280x160/cccccc/333333?text=PicWiz+AI" alt="PicWiz AI" class="w-full h-auto rounded-md mb-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">PicWiz AI</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Freemium</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Photo & Image Editor</span>
+                            </div>
+                            <p class="text-gray-600 text-sm flex-grow">
+                                PicWiz AI is a comprehensive AI-powered photo editing and image generation tool...
+                            </p>
+                            <a href="#" class="mt-4 text-indigo-600 text-sm flex items-center hover:text-indigo-700">
+                                Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                        <!-- Tool Card 4 -->
+                        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col items-start">
+                            <img src="https://placehold.co/280x160/cccccc/333333?text=Remove+BG" alt="Remove Image Background" class="w-full h-auto rounded-md mb-4">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2">Remove Image Background</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Freemium</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AI Background Remover</span>
+                            </div>
+                            <p class="text-gray-600 text-sm flex-grow">
+                                Remove.bg is an AI-powered online tool that automatically removes image...
+                            </p>
+                            <a href="#" class="mt-4 text-indigo-600 text-sm flex items-center hover:text-indigo-700">
+                                Learn More <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column - Product Demo & Popular Articles -->
+            <div class="lg:col-span-1">
+                <!-- Product Demo Video/Image -->
+                <div class="bg-white rounded-lg shadow-md p-4 mb-8">
+                    <div class="relative w-full aspect-video rounded-md overflow-hidden mb-4">
+                        <img src="https://placehold.co/500x300/36454F/FFFFFF?text=Product+Demo" alt="Product Demo" class="w-full h-full object-cover">
+                        <!-- Play button overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+                            <button class="flex items-center justify-center w-14 h-14 rounded-full bg-white bg-opacity-80 text-indigo-600 hover:bg-opacity-100 transition duration-300">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm text-center">Nano Banana Games - Free AI Image Playground - No Sign Up Required</p>
+                </div>
+
+                <!-- Popular Articles -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold text-gray-900">Popular Articles</h3>
+                        <a href="#" class="text-indigo-600 font-medium flex items-center hover:text-indigo-700">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                    <ul class="space-y-6">
+                        <!-- Article 1 -->
+                        <li class="flex items-center space-x-4">
+                            <img src="https://placehold.co/60x60/f0f0f0/333333?text=Art1" alt="Article Thumbnail" class="w-16 h-16 rounded-md object-cover flex-shrink-0">
+                            <div>
+                                <a href="#" class="text-gray-800 hover:text-indigo-600 font-medium leading-tight">How to Use Gemini 2.5 Flash Image Nano Banana to Boost...</a>
+                                <p class="text-gray-500 text-sm mt-1">Sep 2, 2025</p>
+                            </div>
+                        </li>
+                        <!-- Article 2 -->
+                        <li class="flex items-center space-x-4">
+                            <img src="https://placehold.co/60x60/e0e0e0/333333?text=Art2" alt="Article Thumbnail" class="w-16 h-16 rounded-md object-cover flex-shrink-0">
+                            <div>
+                                <a href="#" class="text-gray-800 hover:text-indigo-600 font-medium leading-tight">How to Use Gemini 2.5 Flash Nano Banana to Create Your Art...</a>
+                                <p class="text-gray-500 text-sm mt-1">Aug 29, 2025</p>
+                            </div>
+                        </li>
+                        <!-- Article 3 -->
+                        <li class="flex items-center space-x-4">
+                            <img src="https://placehold.co/60x60/d0d0d0/333333?text=Art3" alt="Article Thumbnail" class="w-16 h-16 rounded-md object-cover flex-shrink-0">
+                            <div>
+                                <a href="#" class="text-gray-800 hover:text-indigo-600 font-medium leading-tight">Nano Banana (Gemini 2.5 Flash Image) Official Release –...</a>
+                                <p class="text-gray-500 text-sm mt-1">Aug 27, 2025</p>
+                            </div>
+                        </li>
+                        <!-- Article 4 -->
+                        <li class="flex items-center space-x-4">
+                            <img src="https://placehold.co/60x60/c0c0c0/333333?text=Art4" alt="Article Thumbnail" class="w-16 h-16 rounded-md object-cover flex-shrink-0">
+                            <div>
+                                <a href="#" class="text-gray-800 hover:text-indigo-600 font-medium leading-tight">DeepSeek v3.1: AIPURE's Comprehensive Review With...</a>
+                                <p class="text-gray-500 text-sm mt-1">Aug 26, 2025</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 px-6 md:px-10 mt-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Column 1: About AIPURE & Social -->
+            <div class="space-y-4">
+                <p class="text-sm">Discover the top AI tools of 2025 with the AI Directory!</p>
+                <a href="mailto:support@aipure.ai" class="text-indigo-400 hover:text-indigo-300 text-sm">support@aipure.ai</a>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.532A8.383 8.383 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.113 4.113 0 001.804-2.27 8.349 8.349 0 01-2.618.995 4.093 4.093 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.109 4.109 0 001.272 5.478 4.073 4.073 0 01-1.85-.512v.052a4.109 4.109 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 16.167 11.666 11.666 0 006.29 18.251z"></path></svg></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm6.208 11.053c-.027-.373-.082-.743-.16-1.114a9.924 9.924 0 00-1.042-2.731c-.34-.73-.787-1.397-1.35-1.996-.562-.6-1.229-1.1-1.996-1.49-.73-.356-1.54-.59-2.42-.702-.88-.112-1.78-.07-2.67.127a9.925 9.925 0 00-2.73 1.043c-.73.34-1.397.787-1.996 1.35-.6.562-1.1 1.229-1.49 1.996-.356.73-.59 1.54-.702 2.42-.112.88-.07 1.78.127 2.67a9.925 9.925 0 001.043 2.73c.34.73.787 1.397 1.35 1.996.562.6 1.229 1.1 1.996 1.49.73.356 1.54.59 2.42.702.88.112 1.78.07 2.67-.127a9.925 9.925 0 002.73-1.043c.73-.34 1.397-.787 1.996-1.35.6-.562 1.1-1.229 1.49-1.996.356-.73.59-1.54.702-2.42.112-.88.07-1.78-.127-2.67zM10.157 16.03l-3.5-3.5 1.414-1.414 2.086 2.086 4.95-4.95 1.414 1.414-6.364 6.364z"/></svg></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm5.77 8.014c-.066.86-.33 1.666-.78 2.378-.448.711-.99 1.298-1.626 1.761-.635.462-1.365.753-2.19.864-.82.112-1.685.086-2.583-.078a9.926 9.926 0 01-2.729-1.043c-.73-.34-1.397-.787-1.996-1.35-.6-.562-1.1-1.229-1.49-1.996-.356-.73-.59-1.54-.702-2.42-.112-.88-.07-1.78.127-2.67a9.925 9.925 0 001.043-2.73c.34-.73.787-1.397 1.35-1.996.562-.6 1.229-1.1 1.996-1.49.73-.356 1.54-.59 2.42-.702.88-.112 1.78-.07 2.67.127a9.925 9.925 0 002.73 1.043c.73.34 1.397.787 1.996 1.35.6.562 1.1 1.229 1.49 1.996.356.73.59 1.54.702 2.42.112.88.07 1.78-.127 2.67z"/></svg></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm5.77 8.014c-.066.86-.33 1.666-.78 2.378-.448.711-.99 1.298-1.626 1.761-.635.462-1.365.753-2.19.864-.82.112-1.685.086-2.583-.078a9.926 9.926 0 01-2.729-1.043c-.73-.34-1.397-.787-1.996-1.35-.6-.562-1.1-1.229-1.49-1.996-.356-.73-.59-1.54-.702-2.42-.112-.88-.07-1.78.127-2.67a9.925 9.925 0 001.043-2.73c.34-.73.787-1.397 1.35-1.996.562-.6 1.229-1.1 1.996-1.49.73-.356 1.54-.59 2.42-.702.88-.112 1.78-.07 2.67.127a9.925 9.925 0 002.73 1.043c.73.34 1.397.787 1.996 1.35.6.562 1.1 1.229 1.49 1.996.356.73.59 1.54.702 2.42.112.88.07 1.78-.127 2.67zM12 2a10 10 0 100 20 10 10 0 000-20zM9 10a1 1 0 11-2 0 1 1 0 012 0zm6 0a1 1 0 11-2 0 1 1 0 012 0zm-3 4a4 4 0 100-8 4 4 0 000 8z"></path></svg></a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-.625 15.654c-.112.288-.307.51-.588.665-.28.156-.6.234-.96.234-.356 0-.67-.078-.942-.234-.27-.155-.46-.376-.57-.665-.11-.289-.165-.63-.165-1.026v-6.3c0-.396.055-.737.165-1.026.11-.289.3-.51.57-.665.27-.156.586-.234.942-.234.36 0 .675.078.96.234.28.155.476.376.588.665.112.289.165.63.165 1.026v6.3c0 .396-.053.737-.165 1.026z"/></svg></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Newest AI Products -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Newest AI Products</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-indigo-400">Github Copilot</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">AppMaxxer</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">Tudlin</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Tools & Resources -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Tools & Resources</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-indigo-400">Kaizen OCR</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">MkSaaS</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">RevuX</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Latest AI News -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Latest AI News</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-indigo-400">How to Use Gemini 2.5 Flash Nano Banana to Create Your Art Album:...</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">DeepSeek v3.1: AIPURE's Comprehensive Review...</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">Emochi Review 2025: AI Chat with Anime-Inspired Characters</a></li>
+                    <li><a href="#" class="hover:text-indigo-400">Lmarena Nano Banana Review 2025: Is This AI Image Generator the New...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+            <p>&copy; 2025 aipure.ai All rights Reserved</p>
+            <div class="flex flex-wrap justify-center space-x-4 mt-2">
+                <a href="#" class="hover:text-indigo-400">About Us</a>
+                <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
+                <a href="#" class="hover:text-indigo-400">Terms of Use</a>
+                <a href="#" class="hover:text-indigo-400">Developer Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
+        <button class="bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition-colors duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08a2 2 0 00-1.5-.78c-.64 0-1.23.36-1.5.86l-4.14-2.22a2 2 0 000-2.22l4.14-2.22c.27.5.86.86 1.5.86a2 2 0 100-4 2 2 0 000 4c-.64 0-1.23-.36-1.5-.86l-4.14 2.22a2 2 0 000 2.22l4.14 2.22c.27-.5.86-.86 1.5-.86a2 2 0 100 4z"/></svg>
+        </button>
+        <button class="bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8l-6 6 1.41 1.41L11 10.83V20h2V10.83l3.59 3.58L18 14l-6-6zM6 4h12v2H6V4z"/></svg>
+        </button>
+    </div>
+
+</body>
+</html>
